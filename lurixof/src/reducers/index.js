@@ -1,0 +1,12 @@
+import { combineReducers } from 'redux'
+import user from './user'
+import data from './data';
+import currentItem from './current-item';
+
+const rootReducers = combineReducers({
+  user,
+  data,
+  currentItem
+});
+
+export default rootReducers;

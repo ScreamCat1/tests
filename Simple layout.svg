@@ -1,0 +1,52 @@
+<svg id="Left_panel" data-name="Left panel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #5c646d;
+      }
+
+      .cls-3 {
+        font-size: 24px;
+        fill: #333;
+        font-family: "Myriad Pro";
+      }
+    </style>
+    <image id="image" width="384" height="100" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAABkAQAAAACnHtoyAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCg0MOzvm6Y4mAAAAKUlEQVRYw+3LMQ0AAAwDoPo33WrYu8BPehRBEARBEARBEARBEARB+BUGm1yuT1k4nBsAAAAASUVORK5CYII="/>
+  </defs>
+  <g id="Scrollbar">
+    <rect x="400" width="20" height="720"/>
+    <rect class="cls-1" x="404" y="3" width="12" height="40"/>
+  </g>
+  <rect class="cls-2" width="400" height="720"/>
+  <g id="Item_Left_Focused" data-name="Item Left Focused">
+    <image x="8" y="8" width="384" height="100" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAABkAQMAAAC1q3XcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABlBMVEWV+MEAAABeeazAAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+AKDQw7O+bpjiYAAAAbSURBVFjD7cEBAQAAAIIg/69uSEABAAAAwLcBEyQAAcwH0J4AAAAASUVORK5CYII="/>
+    <text id="Item_Title" data-name="Item Title" class="cls-3" x="33" y="65">Item Title</text>
+  </g>
+  <g id="Item_Left_copy" data-name="Item Left copy">
+    <use x="8" y="127" xlink:href="#image"/>
+    <text id="Item_Title-2" data-name="Item Title" class="cls-3" x="33" y="184">Item Title</text>
+  </g>
+  <g id="Item_Left_copy_2" data-name="Item Left copy 2">
+    <use x="8" y="246" xlink:href="#image"/>
+    <text id="Item_Title-3" data-name="Item Title" class="cls-3" x="33" y="303">Item Title</text>
+  </g>
+  <g id="Item_Left_copy_3" data-name="Item Left copy 3">
+    <use x="8" y="365" xlink:href="#image"/>
+    <text id="Item_Title-4" data-name="Item Title" class="cls-3" x="33" y="422">Item Title</text>
+  </g>
+  <g id="Item_Left_copy_4" data-name="Item Left copy 4">
+    <use x="8" y="484" xlink:href="#image"/>
+    <text id="Item_Title-5" data-name="Item Title" class="cls-3" x="33" y="541">Item Title</text>
+  </g>
+  <g id="Item_Left_copy_5" data-name="Item Left copy 5">
+    <use x="8" y="603" xlink:href="#image"/>
+    <text id="Item_Title-6" data-name="Item Title" class="cls-3" x="33" y="660">Item Title</text>
+  </g>
+  <text id="Item_Title-7" data-name="Item Title" class="cls-3" x="462.001" y="68">Item Title</text>
+  <text id="Lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit._Curabi" data-name="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabi" class="cls-3" x="461.062" y="282">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu risus eget est bibendum consectetur. Donec vulputate justo quis elit varius, eu pharetra lacus efficitur. Praesent non sem at arcu lacinia efficitur sit amet id orci. Praesent condimentum, nunc sit amet fermentum vestibulum, orci erat fermentum risus, et fringilla lectus elit ullamcorper dolor. Sed quis suscipit justo. Nunc varius elit ac massa pharetra eleifend. Praesent dapibus mauris in varius gravida. Praesent bibendum hendrerit sem a lobortis. Aliquam ultricies eros at lorem ullamcorper convallis. Vestibulum non laoreet risus. Ut a bibendum dui. Nulla auctor turpis ligula, id molestie nisl pretium sed. Ut fringilla urna arcu, non luctus enim lacinia id. Quisque varius neque sit amet velit ultricies, sit amet pretium turpis varius.</text>
+  <rect id="Image-2" data-name="Image" class="cls-2" x="461" y="96" width="350" height="150"/>
+</svg>
