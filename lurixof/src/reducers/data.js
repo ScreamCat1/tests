@@ -1,8 +1,15 @@
 const data = (state=[], action) => {
   const { type, payload } = action;
-  if(type === 'load') {
-    return payload
-  } return state;
+  switch (type) {
+    case 'load':
+      return payload;
+    case 'update_item':
+      const { item, item: { id }, data } = payload;
+      data.splice(id, 1, item);
+      return data;
+    default:
+      return state;
+  }
 };
 
 export default data;

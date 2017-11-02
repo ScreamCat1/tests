@@ -3,14 +3,12 @@ import './ListItem.css';
 
 const renderItems = (data, showItemInfo) => data
   .map(({ id, title }) => (
-    <div key={id} className="List-item"
+    <div key={id} className="list-item"
          onClick={showItemInfo}
     data-id={id}
     >
   {title}
 </div>));
-
-// const renderItems = (data, showItemInfo) => console.log(data, showItemInfo);
 
 const ListItem = ({ data, showItemInfo }) => (
   <div className="list-item-wrap">

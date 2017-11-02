@@ -6,7 +6,14 @@ export const loadData = data => ({
 export const setItem = (data, id) => ({
   type: 'set_item',
   payload: {
-    data : data,
-    id: id
+    data,
+    id
   }
 });
+
+export const updateItem = (data, item) => ({
+  type: 'update_item',
+  payload: {
+    data, item
+  }
+})
