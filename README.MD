@@ -1,7 +1,6 @@
 
 * React
 * Redux
-* normalizr
-* fetch
-* less
+* axios
+* scss
 * webpack / babel / es6
