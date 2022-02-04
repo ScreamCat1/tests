@@ -169,6 +169,10 @@
             "type": "string",
             "nullable": true
           },
+          "customField": {
+            "type": "string",
+            "nullable": true
+          },
           "isDepositAllowed": {
             "type": "boolean"
           },
