@@ -1,0 +1,295 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Pages.Api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/CustomerBalance": {
+      "get": {
+        "tags": [
+          "CustomerBalance"
+        ],
+        "parameters": [
+          {
+            "name": "currencyCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Amount"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Amount"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Amount"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CustomerInformation": {
+      "get": {
+        "tags": [
+          "CustomerInformation"
+        ],
+        "parameters": [
+          {
+            "name": "methodActionName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerInformation"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerInformation"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerInformation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CustomerPaymentOptions": {
+      "get": {
+        "tags": [
+          "CustomerPaymentOptions"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentOptionsResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentOptionsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentOptionsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccountBase": {
+        "type": "object",
+        "properties": {
+          "accountIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountDisplayInformation": {
+            "$ref": "#/components/schemas/AccountDisplayInformation"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccountDisplayInformation": {
+        "type": "object",
+        "properties": {
+          "displayAccountIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "maskedAccountIdentifier": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Amount": {
+        "type": "object",
+        "properties": {
+          "currencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomerInformation": {
+        "type": "object",
+        "properties": {
+          "countryCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "currencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDepositAllowed": {
+            "type": "boolean"
+          },
+          "isWithdrawalAllowed": {
+            "type": "boolean"
+          },
+          "lastUsedPaymentMethod": {
+            "$ref": "#/components/schemas/CustomerPaymentMethod"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomerPaymentMethod": {
+        "type": "object",
+        "properties": {
+          "paymentMethod": {
+            "$ref": "#/components/schemas/PaymentMethod"
+          },
+          "allowNewAccount": {
+            "type": "boolean"
+          },
+          "usedAccount": {
+            "$ref": "#/components/schemas/AccountBase"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentMethod": {
+        "type": "object",
+        "properties": {
+          "paymentMethodName": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentMethodId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isAvailable": {
+            "type": "boolean"
+          },
+          "isInMaintenance": {
+            "type": "boolean"
+          },
+          "paymentMethodFees": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransactionFee"
+            },
+            "nullable": true
+          },
+          "paymentMethodLimits": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransactionLimit"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentOptionsResponse": {
+        "type": "object",
+        "properties": {
+          "paymentOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentMethod"
+            },
+            "nullable": true
+          },
+          "protectionOfFundsAcceptanceRequired": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TransactionFee": {
+        "type": "object",
+        "properties": {
+          "currencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "feeFixed": {
+            "type": "number",
+            "format": "double"
+          },
+          "feeFrom": {
+            "type": "number",
+            "format": "double"
+          },
+          "feePercent": {
+            "type": "number",
+            "format": "double"
+          },
+          "methodActionName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TransactionLimit": {
+        "type": "object",
+        "properties": {
+          "currencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "minLimit": {
+            "type": "number",
+            "format": "double"
+          },
+          "maxLimit": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
